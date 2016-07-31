@@ -1,0 +1,7 @@
+<h1>Diary Entries</h1>
+<hr>
+<% @entries.each do |entry| %>
+  <h2><%= entry.title %></h2>
+  <p><%= entry.date %></p>
+  <p><%= entry.contents %></p>
+<% end %>
