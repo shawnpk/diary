@@ -1,12 +1,14 @@
 <h1>Diary Entries</h1>
-<%= link_to "New Entry", new_entry_path, class: 'btn btn-primary' %>
+<%= link_to "New Entry", new_entry_path, class: 'btn btn-default' %>
 <hr>
 <% @entries.each do |entry| %>
   <div class="well well-sm">
-    <h3><%= link_to entry.title, entry %></h3>
-    <p><%= entry.date %></p>
-    <p><%= entry.contents %></p>
+    <h3><%= link_to entry.title, entry, class: 'index_title' %></h3>
+    <div class="index_copy">
+      <p><%= entry.date %></p>
+      <p><%= entry.contents %></p>
+    </div>
   </div>
 <% end %>
 
-<%= link_to "New Entry", new_entry_path, class: 'btn btn-primary' %>
+<%= link_to "New Entry", new_entry_path, class: 'btn btn-default' %>

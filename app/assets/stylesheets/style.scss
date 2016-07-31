@@ -1,3 +1,24 @@
-.show_buttons {
-  display: inline-block;
+.well {
+  background-color: #34495e !important;
+}
+
+.index_title {
+  color: darkgrey;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.index_copy, .show_copy, .new_title, .edit_title {
+  color: white;
+}
+
+.navbar-default {
+  background-color: #34495e !important;
+  border-radius: 0 !important;
+}
+
+.navbar-brand {
+  color: white !important;
 }

@@ -1,11 +1,13 @@
 <div class="well">
-  <h2><%= @entry.title %></h2>
-  <p><%= @entry.date %></p>
-  <p><%= @entry.contents %></p>
-</div>
+  <div class="show_copy">
+    <h2><%= @entry.title %></h2>
+    <p><%= @entry.date %></p>
+    <p><%= @entry.contents %></p>
+  </div>
 
-<%= link_to "Back to all entries", entries_path, class: 'btn btn-info btn-xs' %>
-  <br>
-<%= link_to "Edit this Entry", edit_entry_path(@entry), class: 'btn btn-warning btn-xs' %>
-  <br>
-<%= link_to "Delete this Entry", entry_path(@entry), method: :delete, data: { confirm: 'Are you sure you want to delete this entry?'}, class: 'btn btn-danger btn-xs' %>
+  <%= link_to "Back to all entries", entries_path, class: 'btn btn-info btn-xs' %>
+    <br>
+  <%= link_to "Edit this Entry", edit_entry_path(@entry), class: 'btn btn-warning btn-xs' %>
+    <br>
+  <%= link_to "Delete this Entry", entry_path(@entry), method: :delete, data: { confirm: 'Are you sure you want to delete this entry?'}, class: 'btn btn-danger btn-xs' %>
+</div>
