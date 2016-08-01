@@ -5,10 +5,12 @@
   <div class="well well-sm">
     <h3><%= link_to entry.title, entry, class: 'index_title' %></h3>
     <div class="index_copy">
-      <p><%= entry.date %></p>
+      <p><small><strong><%= entry.created_at.strftime("%b %d, %Y") %></strong></small></p>
       <p><%= entry.contents %></p>
     </div>
   </div>
 <% end %>
 
-<%= link_to "New Entry", new_entry_path, class: 'btn btn-default' %>
+<% if @entries.present? %>
+  <%= link_to "New Entry", new_entry_path, class: 'btn btn-default' %>
+<% end %>
